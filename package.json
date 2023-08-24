@@ -1,0 +1,8 @@
+{
+  "name": "credit-card-2lvl",
+  "scripts": {},
+  "author": "Zhebit Olga",
+  "dependencies": {
+    "redom": "^3.29.1"
+  }
+}
