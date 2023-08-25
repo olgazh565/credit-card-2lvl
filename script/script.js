@@ -137,7 +137,7 @@ const createForm = () => {
       }),
     ]),
     el('div', {className: 'field-container'}, [
-      el('label', {htmlFor: 'securitycode'}, 'Expiration (mm/yy)'),
+      el('label', {htmlFor: 'securitycode'}, 'Security Code'),
       el('input', {
         id: 'securitycode',
         maxLength: '3',
@@ -148,6 +148,12 @@ const createForm = () => {
           const svgsecurity = document.getElementById('svgsecurity');
           target.value = target.value.replace(/\D+/g, '');
           svgsecurity.textContent = target.value;
+        },
+        onfocus() {
+          document.querySelector('.creditcard').classList.add('flipped');
+        },
+        onblur() {
+          document.querySelector('.creditcard').classList.remove('flipped');
         },
       }),
     ]),
